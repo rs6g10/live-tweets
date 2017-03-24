@@ -15,4 +15,4 @@ $ npm start
 ```
 
 ## Design Illustrations
-Design illustrations were designed and created by [David Willis] (https://dribbble.com/DJWillis)
+Design illustrations were designed and created by [David Willis](https://dribbble.com/DJWillis)

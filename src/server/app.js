@@ -6,7 +6,7 @@ const express = require('express'),
     twitter = require('twitter'),
     http = require('http').Server(app),
     io = require('socket.io')(http),
-    twitterConfig = require('./twitter-config-keys/twitter'),
+    twitterConfig = require('./twitter-config-keys/config'),
     viewPath = path.join(`${__dirname}/../server/views/app.html`),
     tweets = new twitter(twitterConfig.config);
 

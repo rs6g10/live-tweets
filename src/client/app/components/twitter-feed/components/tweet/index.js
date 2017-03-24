@@ -9,20 +9,31 @@ const Tweet = React.createClass({
     render: function () {
         const text = this.props.tweet.text;
 
-// Match URLs
+        // Match URLs
         tweetText = reactStringReplace(text, /(https?:\/\/\S+)/g, (match, i) => (
-            <a key={match + i} href={match}>{match}</a>
+            <a key={match + i}
+               href={match}>
+                {match}
+            </a>
         ));
 
-// Match @-mentions
+        // Match @-mentions
         tweetText = reactStringReplace(tweetText, /@(\w+)/g, (match, i) => (
-            <span className="handle"><a key={match + i} href={`https://twitter.com/${match}`}>@{match}</a></span>
+            <span key={`span${match + i}`} className="handle">
+                <a key={match + i}
+                   href={`https://twitter.com/${match}`}>
+                    @{match}
+                </a>
+            </span>
         ));
 
-// Match hashtags
+        // Match hashtags
         tweetText = reactStringReplace(tweetText, /#(\w+)/g, (match, i) => (
-            <span className="handle"><a key={match + i}
-                                        href={`https://twitter.com/hashtag/${match}`}>#{match}</a></span>
+            <span key={`span${match + i}`} className="handle">
+                <a key={match + i}
+                   href={`https://twitter.com/hashtag/${match}`}>
+                    #{match}</a>
+            </span>
         ));
 
 

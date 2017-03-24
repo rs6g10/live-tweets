@@ -1,0 +1,68 @@
+@import '../../variables';
+
+.wrapper {
+  height: 1080px;
+  width: 1920px;
+  margin: auto;
+  background: $body-background-colour;
+  overflow: hidden !important;
+}
+.sky {
+  height: 1080px;
+  width: 1920px;
+  position: absolute;
+  bottom: 95px;
+  background: url('../../assets/img/sky.svg');
+  background-repeat: repeat-x;
+  background-position: top center;
+}
+
+.skyline {
+  position: absolute;
+  bottom: 18px;
+  height: 315px;
+  width: 1920px;
+  background: url('../../assets/img/skyline.svg');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: cover;
+  animation: translateX 30s infinite linear both;
+}
+.landscape {
+  position: absolute;
+  bottom: 100px;
+  height: 315px;
+  width: 1920px;
+  background: url('../../assets/img/landscape.svg');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: contain;
+  animation: translateX 100s infinite linear both;
+}
+.bridge {
+  position: absolute;
+  bottom: 0px;
+  height: 315px;
+  width: 1920px;
+  background: url('../../assets/img/bridge.svg');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: contain;
+  animation: translateX 5s infinite linear both;
+}
+.train {
+  position: absolute;
+  bottom: -88px;
+  height: 315px;
+  width: 1500px;
+  left: 555px;
+  background: url('../../assets/img/train.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+@keyframes translateX {
+  0% {background-position: 0px 0px;}
+  100% {background-position:  1920px 0px;}
+}

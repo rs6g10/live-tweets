@@ -1,0 +1,45 @@
+@import '../../../../variables';
+
+.tweet-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #017564;
+  text-align: left;
+}
+
+.handle {
+  color: white;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.box {
+  padding-left: 100px;
+  background-image: url('../../../../assets/img/twitter_logo.svg');
+  background-repeat: no-repeat;
+  background-size: 200px 50px;
+  background-position-x: -50px;
+  background-position-y: 25px;
+  z-index: 100;
+  align-items: left;
+  width: 50%;
+  transition: display 0.5s ease;
+
+}
+
+.box-container {
+  display: flex;
+  transition: display 0.5s ease;
+  line-height: 45px;
+  height: 150px;
+  margin-top: -10%;
+}
+.box {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 1.2s;
+}
+
+
